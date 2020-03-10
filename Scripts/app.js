@@ -126,7 +126,7 @@ let app;
                 switch(child.id)
                 {
                     case "home":
-                        LoadPageContent("mainContent", "./Views/content/home.html");
+                        LoadPageContent("mainContent", "./Views/content/home.html", DisplayHomePageContent);
                         break;
                       
                     case "products":
@@ -160,7 +160,11 @@ let app;
        LoadPageContent("mainContent", "./Views/content/home.html");
 
        LoadPageContent("mainFooter","./Views/partials/footer.html");
-       
+
+       $("main").delegate("button", "click", function(){
+        LoadPageContent("mainContent", "./Views/content/tasklist.html", DisplayProjectsContent);
+      });
+     
     }
 
     function DisplayProductsContent()
@@ -354,10 +358,12 @@ let app;
             
         });
     }
+    
 
     function DisplayProjectsContent()
     {
         document.title = "WEBD6201 - Projects";
+        
     }
 
     function DisplayLoginContent()
