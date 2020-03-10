@@ -144,9 +144,7 @@ let app;
                     case "login":
                         LoadPageContent("mainContent", "./Views/content/login.html", DisplayLoginContent);
                         break;
-                    case "projectsButton":
-                        LoadPageContent("mainContent", "./Views/content/tasklist.html", DisplayProjectsContent);
-                        break;
+
                 }
             }); 
         }
